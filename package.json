@@ -2,8 +2,8 @@
   "name": "opgeruimd-wonen",
   "version": "1.0.0",
   "private": true,
-  "description": "opgeruimd-wonen",
-  "author": "smitser",
+  "description": "Op zoek naar rust en ruimte in je huis én een snelle verkoop? Ik combineer opruimcoaching en vastgoedstyling om jouw woning verkoopklaar te maken. Samen zorgen we voor een frisse, aantrekkelijke uitstraling die kopers aantrekt!",
+  "author": "Jorn Smits",
   "keywords": [
     "gatsby"
   ],
@@ -24,6 +24,7 @@
     "gatsby-plugin-sitemap": "^6.14.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.83.0"
