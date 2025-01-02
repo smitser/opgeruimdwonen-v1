@@ -5,7 +5,7 @@ import Services from '../components/Services'
 import Intro from '../components/Intro'
 import Workflow from '../components/Workflow'
 import About from '../components/About'
-import Portfolio from '../components/Portfolio'
+import Reviews from '../components/Reviews'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
@@ -20,7 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Services />
       <Workflow />
       <About />
-      <Portfolio />
+      <Reviews />
       <Contact />
       <hr />
       <Footer />

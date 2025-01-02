@@ -1,16 +1,32 @@
-* {
+$primary: #5d985d;
+$text-color: #3a443a;
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 body {
   font-family: 'Figtree';
-  color: #3a443a;
+  color: $text-color;
+  line-height: 1.5;
 }
 
 a {
   &:hover {
     text-decoration: underline;
-    color: #5d985d;
+    color: $primary;
   }
 }
 
@@ -35,7 +51,7 @@ button {
   color: inherit;
   transition: all 100ms ease-in;
   cursor: pointer;
-  background-color: #5d985d;
+  background-color: $primary;
   color: #fff;
 }
 
@@ -47,10 +63,10 @@ textarea {
   padding: 8px 12px;
 
   &:focus-visible {
-    --tw-ring-color: #5d985d;
+    --tw-ring-color: #{$primary};
     --tw-ring-offset-width: 2px;
     --tw-ring-offset-shadow: 0 0 0 2px #fff;
-    --tw-ring-shadow: 0 0 0 4px #5d985d;
+    --tw-ring-shadow: 0 0 0 4px #{$primary};
     outline: 2px solid transparent;
     outline-offset: 2px;
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 #0000;
@@ -75,27 +91,28 @@ textarea {
 }
 
 .contact {
+  padding-block: 96px;
   background: linear-gradient(180deg, #fff 50%, rgba(93, 152, 93, 0.1) 100%);
 }
 
 .contact-heading {
   font-size: 48px;
-  color: #3a443a;
+  color: $text-color;
   display: flex;
   align-items: center;
   font-weight: 900;
+  margin-block-end: 24px;
 
   &::before {
     content: '';
     width: 48px;
     height: 8px;
-    background-color: #5d985d;
+    background-color: $primary;
     margin-inline-end: 8px;
   }
 }
 
 .img-container {
-  // border-radius: 100%;
   overflow: hidden;
 }
 
@@ -111,8 +128,47 @@ textarea {
   border-radius: 12px;
 }
 
-.contact-bottom {
-  padding-block-end: 96px;
+#reviews {
+  padding-block: 96px;
+  background-color: $text-color;
+
+  .container {
+    margin-top: 32px;
+  }
+
+  .review {
+    color: #fff;
+    position: relative;
+    font-size: 20px;
+
+    .ldquo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 96px;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    margin-inline-end: 8px;
+  }
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 @import 'grid';
