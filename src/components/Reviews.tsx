@@ -5,7 +5,7 @@ function Reviews() {
     <div id='reviews'>
       <div className='container'>
         <div className='row justify-content-center'>
-          <div className='col col-6 review'>
+          <div className='col col-lg-6 col-8 review'>
             <span className='ldquo'>&#10077;</span>
             <p>
               Dankzij de <span className='underline'>persoonlijke tips</span> van Sofie konden wij ons huis helemaal
