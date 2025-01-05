@@ -4,6 +4,8 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Opgeruimd wonen`,
     siteUrl: `https://www.opgeruimdwonen.be`,
+    description:
+      'Op zoek naar rust en ruimte in je huis én een snelle verkoop? Ik combineer opruimcoaching en vastgoedstyling om jouw woning verkoopklaar te maken. Samen zorgen we voor een frisse, aantrekkelijke uitstraling die kopers aantrekt!',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -34,6 +36,12 @@ const config: GatsbyConfig = {
       options: {
         fonts: [`poppins\:700`, `figtree\:400,800`],
         display: 'swap',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'nl',
       },
     },
   ],

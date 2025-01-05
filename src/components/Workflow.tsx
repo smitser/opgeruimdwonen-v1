@@ -12,19 +12,19 @@ function Workflow() {
         <div className='row'>
           <div className='col'>
             <div className='step'>
-              <h3>Intakegesprek</h3>
+              <h3>Kennismakingsgesprek</h3>
               <p>
                 Ben je nieuwsgierig naar wat ik voor jou kan betekenen? Plan nu een gratis kennismakingsgesprek van 15
-                minuten. In dit gesprek bespreken we jouw wensen en doelen, en ontdek je of onze aanpak bij jou past. We
+                minuten. In dit gesprek bespreken we jouw wensen en doelen, en ontdek je of mijn aanpak bij jou past. We
                 doen dit via Zoom of telefonisch.
               </p>
             </div>
             <div className='step'>
-              <h3>Kennismakingsgesprek</h3>
+              <h3>Intakegesprek</h3>
               <p>
                 <strong>Introductie:</strong> Ben je klaar om je huis of werkruimte eindelijk op orde te brengen, maar
                 weet je niet waar je moet beginnen? Of voel je je overweldigd en heb je behoefte aan een frisse start?
-                Dan is een kennismakingsgesprek over organiseren precies wat je nodig hebt!
+                Dan is het intakegesprek precies wat je nodig hebt!
               </p>
               <p>Tijdens ons kennismakingsgesprek gaan we samen ontdekken:</p>
               <ul>
