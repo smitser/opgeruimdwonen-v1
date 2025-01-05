@@ -1,7 +1,7 @@
 import React from 'react'
 import FacebookIcon from '../icons/Facebook'
 import InstagramIcon from '../icons/Instagram'
-import ArrowUpSquared from '../icons/ArrowUpSquared'
+import ArrowUpSquaredIcon from '../icons/ArrowUpSquared'
 import logo from '../images/logo-one-liner.svg'
 
 const Copyright = () => {
@@ -14,7 +14,7 @@ const Socials = () => {
       <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/profile.php?id=61569936239935'>
         <FacebookIcon />
       </a>
-      <a target='_blank' rel='noopener noreferrer' href='#'>
+      <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/opgeruimdwonenbysofie/'>
         <InstagramIcon />
       </a>
     </div>
@@ -25,14 +25,17 @@ const BackToTop = () => {
   return (
     <a href='#header' id='back-to-top'>
       <span>Terug naar boven</span>
-      <ArrowUpSquared />
+      <ArrowUpSquaredIcon />
     </a>
   )
 }
 
-const LogoOneLiner = () => {
+export const LogoOneLiner = ({ width, height }: { width?: number; height?: number }) => {
+  const w = width || height ? undefined : 380
+  const h = height || undefined
+
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 561.26 93.54' width={380} fill='#5d985d'>
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 561.26 93.54' width={w} height={h} fill='#5d985d'>
       <path d='M8.37,74.41c-2.62-1.38-4.68-3.35-6.17-5.91C.7,65.94-.05,62.93-.05,59.47s.76-6.42,2.27-8.98c1.51-2.56,3.58-4.53,6.2-5.91,2.62-1.38,5.58-2.07,8.89-2.07s6.27.69,8.89,2.07c2.62,1.38,4.68,3.35,6.2,5.91,1.51,2.56,2.27,5.55,2.27,8.98s-.76,6.43-2.27,9.01c-1.52,2.58-3.59,4.56-6.23,5.94-2.64,1.38-5.61,2.07-8.92,2.07s-6.27-.69-8.89-2.07h0ZM21.3,64.63c1.08-1.2,1.62-2.92,1.62-5.17s-.54-3.96-1.62-5.14c-1.08-1.18-2.41-1.77-3.99-1.77s-2.89.59-3.96,1.77c-1.06,1.18-1.6,2.89-1.6,5.14s.51,4.02,1.54,5.2c1.02,1.18,2.34,1.77,3.96,1.77s2.96-.6,4.05-1.8h0Z' />
       <path d='M54.82,43.87c1.65-.91,3.6-1.36,5.85-1.36,2.64,0,5.03.69,7.18,2.07,2.15,1.38,3.84,3.35,5.08,5.91,1.24,2.56,1.86,5.55,1.86,8.98s-.62,6.43-1.86,9.01c-1.24,2.58-2.93,4.56-5.08,5.94-2.15,1.38-4.54,2.07-7.18,2.07-2.24,0-4.18-.45-5.82-1.36-1.63-.9-2.92-2.13-3.87-3.66v20.44h-11.58v-48.96h11.58v4.61c.91-1.54,2.19-2.76,3.84-3.66h0ZM61.28,54.42c-1.16-1.2-2.59-1.8-4.28-1.8s-3.12.61-4.28,1.83c-1.16,1.22-1.74,2.89-1.74,5.02s.58,3.86,1.74,5.08c1.16,1.22,2.59,1.83,4.28,1.83s3.12-.62,4.28-1.86c1.16-1.24,1.74-2.92,1.74-5.05s-.58-3.85-1.74-5.05h0Z' />
       <path d='M97.67,43.87c1.67.91,2.96,2.13,3.87,3.66v-4.61h11.58v32.78c0,3.11-.59,5.92-1.77,8.42-1.18,2.5-3.02,4.5-5.52,5.99-2.5,1.49-5.66,2.24-9.48,2.24-5.12,0-9.21-1.2-12.29-3.6-3.07-2.4-4.82-5.67-5.26-9.8h11.4c.24,1.06.83,1.89,1.77,2.48.95.59,2.16.89,3.66.89,3.94,0,5.91-2.2,5.91-6.61v-4.25c-.91,1.54-2.2,2.76-3.87,3.66-1.67.91-3.63,1.36-5.88,1.36-2.64,0-5.03-.69-7.18-2.07-2.15-1.38-3.84-3.36-5.08-5.94-1.24-2.58-1.86-5.58-1.86-9.01s.62-6.42,1.86-8.98c1.24-2.56,2.93-4.53,5.08-5.91,2.15-1.38,4.54-2.07,7.18-2.07,2.24,0,4.2.45,5.88,1.36h0ZM99.79,54.45c-1.16-1.22-2.59-1.83-4.28-1.83s-3.17.6-4.31,1.8c-1.14,1.2-1.71,2.89-1.71,5.05s.57,3.81,1.71,5.05c1.14,1.24,2.58,1.86,4.31,1.86s3.12-.61,4.28-1.83c1.16-1.22,1.74-2.91,1.74-5.08s-.58-3.8-1.74-5.02h0Z' />
@@ -57,18 +60,18 @@ function Footer() {
     <footer id='footer'>
       <div className='container'>
         <div className='row footer-content2'>
-          <div className='col col-6'>
+          <div className='col-12'>
             <div className='company'>
               <LogoOneLiner />
-              <p>Opruimen is niet moeilijk, het is een kwestie van keuzes maken. Laat mij jou helpen!</p>
-              <BackToTop />
+              <p>Maak ruimte voor rust en verkoop met vertrouwen</p>
+              {/* <BackToTop /> */}
             </div>
           </div>
-          <div className='col col-2 offset-4 links mt-3'>
+          {/* <div className='col col-12 col-md-2 offset-md-4 links mt-3'>
             <h4>Mijn diensten</h4>
             <a href=''>Vastgoedstyling</a>
             <a href=''>Opruimcoach</a>
-          </div>
+          </div> */}
         </div>
         <hr />
         <div className='footer-content'>

@@ -8,6 +8,7 @@ import About from '../components/About'
 import Reviews from '../components/Reviews'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import Promo from '../components/Promo'
 
 import 'normalize.css'
 import '../scss/style.scss'
@@ -17,10 +18,11 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <Header />
       <Intro />
-      <Services />
       <Workflow />
-      <About />
+      <Promo />
+      {/* <Services /> */}
       <Reviews />
+      <About />
       <Contact />
       <hr />
       <Footer />
