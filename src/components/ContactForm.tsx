@@ -12,7 +12,18 @@ function ContactForm() {
         </div>
         <div className='row content'>
           <div className='col-12 col-md-7'>
-            <form name='contact' method='POST' data-netlify='true'>
+            <form
+              name='contact'
+              method='POST'
+              data-netlify='true'
+              data-netlify-recaptcha='true'
+              netlify-honeypot='bot-field'
+            >
+              <p hidden>
+                <label>
+                  Don’t fill this out if you’re human: <input name='bot-field' />
+                </label>
+              </p>
               <div className='control'>
                 <label htmlFor='name'>
                   Naam <span className='marker'>(verplicht)</span>
@@ -67,6 +78,7 @@ function ContactForm() {
                 </label>
                 <textarea id='message' rows={7} name='message' required />
               </div>
+              <div data-netlify-recaptcha='true'></div>
               <button type='submit' className='btn'>
                 Verzenden
               </button>
