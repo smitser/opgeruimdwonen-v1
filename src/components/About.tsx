@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../images/intro.jpg'
+import about from '../images/about.jpg'
 
 function About() {
   return (
@@ -7,10 +7,16 @@ function About() {
       <div className='container'>
         <div className='row content'>
           <div className='col-12 col-md-5 col-xl-4  d-flex justify-content-center justify-content-lg-start'>
-            <img src={image} alt='TODO' className='about-img' />
+            <img
+              src={about}
+              alt='Sofie in een wit shirt glimlacht terwijl ze aan een tafel zit met papieren. Een plant in een pot staat op de voorgrond.'
+              className='about-img'
+            />
           </div>
           <div className='col-12 col-md-7 offset-xl-1 col-xl-7'>
-            <h2 className='heading heading-with-line'>Een beetje over mij</h2>
+            <h2 className='heading'>
+              Ontdek <span className='clr-green'>mijn verhaal</span>
+            </h2>
             <p className='lead'>
               <b>Hi! Ik ben Sofie en ik help je graag om rust en overzicht in je huis (en je leven) te brengen.</b>
             </p>

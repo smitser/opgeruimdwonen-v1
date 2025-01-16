@@ -1,13 +1,13 @@
 import React from 'react'
-import Candles from '../images/candles.jpg'
+import candles from '../images/candles.jpg'
 
-function Contact() {
+function ContactForm() {
   return (
     <div id='contact'>
       <div className='container'>
         <div className='row'>
           <div className='col-12'>
-            <h2 className='heading heading-with-line'>Contact</h2>
+            <h2 className='heading'>Contact</h2>
           </div>
         </div>
         <div className='row content'>
@@ -73,7 +73,11 @@ function Contact() {
             </form>
           </div>
           <div className='col-12 col-md-5 col-xl-4 offset-xl-1 d-flex justify-content-center'>
-            <img src={Candles} alt='TODO' className='candles' />
+            <img
+              src={candles}
+              alt='Een witte vaas met gedroogde roze bloemen en twee brandende blauwe kaarsen op een zwarte tafel.'
+              className='candles'
+            />
           </div>
         </div>
       </div>
@@ -81,4 +85,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default ContactForm

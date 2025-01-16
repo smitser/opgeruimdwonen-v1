@@ -2,10 +2,7 @@ import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Opgeruimd wonen`,
     siteUrl: `https://www.opgeruimdwonen.be`,
-    description:
-      'Op zoek naar rust en ruimte in je huis én een snelle verkoop? Ik combineer opruimcoaching en vastgoedstyling om jouw woning verkoopklaar te maken. Samen zorgen we voor een frisse, aantrekkelijke uitstraling die kopers aantrekt!',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -18,7 +15,27 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        name: 'Opgeruimd Wonen',
+        short_name: 'Opgeruimd Wonen',
+        start_url: '/',
+        theme_color: '#e1d2a3',
+        background_color: '#e1d2a3',
+        display: 'standalone',
+        icon: './src/favicon/favicon.svg',
+        icons: [
+          {
+            src: './src/favicon/web-app-manifest-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+          {
+            src: './src/favicon/web-app-manifest-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
       },
     },
     'gatsby-plugin-sharp',

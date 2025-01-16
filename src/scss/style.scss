@@ -1,5 +1,23 @@
 $primary: #5d985d;
-$text-color: #3a443a;
+$btn-color: #5d985d;
+$text-color: #163020;
+$beige: #e1d2a3;
+
+.text-center {
+  text-align: center !important;
+}
+
+.poppins {
+  font-family: 'Poppins';
+}
+
+.clr-beige {
+  color: $beige;
+}
+
+.clr-green {
+  color: $primary;
+}
 
 *,
 *::before,
@@ -9,6 +27,7 @@ $text-color: #3a443a;
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 h1,
@@ -34,7 +53,7 @@ svg {
 
 body {
   font-family: 'Figtree';
-  color: $text-color;
+  color: rgb(48, 55, 65);
   line-height: 1.5;
 }
 
@@ -59,29 +78,28 @@ button {
   font-family: 'Poppins';
   font-weight: 700;
   line-height: 1.15;
+  color: $text-color;
 
   font-size: 40px;
-  color: $text-color;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
   margin-block-end: 24px;
-  position: relative;
 
   @media only screen and (min-width: 992px) {
     font-size: 48px;
   }
 }
 
-// button {
-//   padding: 16px 32px;
-//   border-radius: 16px;
-//   border: none;
-//   transition: all 100ms ease-in;
-//   cursor: pointer;
-//   background-color: $primary;
-//   color: #fff;
-// }
+.subheading {
+  font-family: 'Poppins';
+  font-weight: 700;
+  line-height: 1.15;
+
+  font-size: 32px;
+  margin-block-end: 24px;
+
+  span {
+    color: $primary;
+  }
+}
 
 input,
 textarea {
@@ -89,6 +107,7 @@ textarea {
   border: thin solid #cad0d8;
   border-radius: 12px;
   padding: 8px 12px;
+  background-color: #fff;
 
   &:focus-visible {
     outline: 2px solid transparent;
@@ -156,52 +175,6 @@ textarea {
   border-radius: 12px;
 }
 
-#reviews {
-  padding-block: 96px;
-  background-color: $text-color;
-
-  .container {
-    margin-top: 32px;
-  }
-
-  .review {
-    color: #fff;
-    position: relative;
-    font-size: 20px;
-
-    .ldquo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 96px;
-      color: rgba(255, 255, 255, 0.1);
-      line-height: 1;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .reviews-heading {
-    font-size: 48px;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-  }
-}
-
-.author {
-  display: flex;
-  align-items: center;
-  margin-top: 8px;
-
-  &::before {
-    content: '';
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    margin-inline-end: 8px;
-  }
-}
-
 .underline {
   text-decoration: underline;
 }
@@ -234,25 +207,16 @@ textarea {
 #intro {
   padding-block: 96px;
 
-  .icon {
-    font-size: 48px;
-    display: inline-flex;
-    border: thin solid #cad0d8;
-    border-radius: 12px;
-    padding: 12px;
-    margin-block-end: 20px;
+  .heading-intro {
+    color: #c8ad55;
   }
 
-  .intro {
-    border-radius: 12px;
-    background-color: #fff;
-  }
-
-  svg {
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    fill: $text-color;
+  .photo {
+    border-radius: 57% 43% 43% 57% / 56% 27% 73% 44%;
+    max-height: 428px;
+    object-fit: cover;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px,
+      rgba(17, 17, 26, 0.1) 0px 24px 80px;
   }
 
   .content {
@@ -275,36 +239,17 @@ textarea {
 }
 
 #promo {
-  padding-block: 96px;
+  position: relative;
+  overflow-x: clip;
+  padding-block: 144px 196px;
 
-  .promo-content {
-    margin-block-start: 32px;
-    row-gap: 48px;
-  }
-
-  p {
-    margin-block-end: 12px;
-  }
-
-  .icon {
-    font-size: 48px;
-    display: inline-flex;
-    border: thin solid #cad0d8;
-    border-radius: 12px;
-    padding: 12px;
-    margin-block-end: 20px;
-
-    svg {
-      width: 1em;
-      height: 1em;
-      display: inline-block;
-      fill: #3a443a;
-    }
+  .col-12 {
+    max-width: 60ch;
   }
 }
 
 #about {
-  padding-block: 96px 48px;
+  padding-block: 96px;
 
   .lead {
     font-size: 1.17em;
@@ -344,21 +289,9 @@ textarea {
     rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
-.heading-with-line {
-  &::before {
-    content: '';
-    width: 48px;
-    height: 8px;
-    background-color: $primary;
-    position: absolute;
-    left: -64px;
-  }
-}
-
 .step {
   margin-bottom: 2rem;
   padding: 1.5rem;
-
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -369,19 +302,59 @@ textarea {
 
 .btn {
   padding: 16px 32px;
-  border-radius: 16px;
+  border-radius: 12px;
   border: none;
   transition: all 100ms ease-in;
   cursor: pointer;
-  background-color: $primary;
+  background-color: $btn-color;
   color: #fff;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4a7a4a;
+  }
+}
+
+.btn--secondary {
+  background-color: $text-color;
+  color: #fff;
+
+  &:hover {
+    background-color: $text-color;
+    color: $beige;
+  }
+}
+
+#services-content {
+  padding-block: 48px;
+
+  a {
+    color: $primary;
+    text-decoration-color: rgba(93, 152, 93, 0.4);
+
+    &:hover {
+      text-decoration-color: $primary;
+    }
+  }
+}
+
+#visual {
+  position: absolute;
+  z-index: -1;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) scale(1.4);
+  max-width: unset;
+  fill: $beige;
 }
 
 @import 'grid';
 @import 'header';
+@import 'primary-navigation';
 @import 'footer';
 @import 'screenreader';
-
-// #eff5ef
-// #f9fafb
-// #e4e4e7
+@import 'offering';
+@import 'reviews';

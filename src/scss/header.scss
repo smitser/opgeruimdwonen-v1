@@ -10,7 +10,7 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    background: radial-gradient(circle at top left, #eff5ef, transparent 85%);
+    background: radial-gradient(circle at top left, hsla(45, 51%, 76%, 25%), transparent 85%);
   }
 
   &::after {
@@ -24,57 +24,7 @@
     background-image: url('../images/header.jpg');
     background-size: cover;
     background-position: 65% bottom;
-  }
-
-  #primary-navigation {
-    margin-block-end: 40px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  #logo {
-    margin-inline-end: auto;
-    display: inline-block;
-    padding-block: 8px;
-    transition: transform 0.3s ease-in-out;
-
-    svg {
-      max-width: 60vw;
-    }
-  }
-
-  .menu {
-    padding: 0;
-    list-style: none;
-
-    &.open {
-      display: flex;
-    }
-
-    a {
-      text-decoration: none;
-      padding-block: 16px;
-      display: inline-block;
-      color: $text-color;
-    }
-  }
-
-  .menu-toggle {
-    background-color: transparent;
-    border: thin solid #cad0d8;
-    border-radius: 12px;
-    padding: 10px;
-    position: relative;
-    font-size: 20px;
-    display: flex;
-    color: $text-color;
-
-    svg {
-      width: 1em;
-      height: 1em;
-      fill: currentColor;
-    }
+    opacity: 0.75;
   }
 
   .hero {
@@ -84,10 +34,15 @@
     flex-direction: column;
     justify-content: center;
     gap: 24px;
+    margin-block-end: 120px;
 
     .heading {
       font-size: 48px;
       margin-block-end: 0;
+    }
+
+    .text {
+      font-size: 20px;
     }
   }
 
@@ -96,95 +51,27 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
-  #header {
-    #primary-navigation {
-      background-color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-
-    .menu {
-      display: none;
-      flex-basis: 100%;
-      flex-direction: column;
-    }
-  }
-}
-
 @media only screen and (min-width: 768px) {
   #header {
     min-height: 100vh;
 
     &::before {
-      background: radial-gradient(circle at top left, #eff5ef, transparent 80%);
+      background: radial-gradient(circle at top left, hsla(45, 51%, 76%, 25%), transparent 80%);
     }
 
     &::after {
       background-position: 75% bottom;
-    }
-
-    #logo {
-      &:focus {
-        transform: scale(1.15);
-      }
-    }
-
-    .menu {
-      display: flex;
-      gap: 8px;
-      font-size: 18px;
-      padding: 0;
-
-      a {
-        padding: 10px 16px;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom-color 0.3s ease-in-out;
-
-        &:hover {
-          border-bottom-color: currentColor;
-        }
-
-        &:focus {
-          outline: 2px solid currentColor;
-        }
-      }
-
-      .nav-contact {
-        background-color: $text-color;
-        transition: all 0.3s ease-in-out;
-        border-radius: 20px;
-        color: #fff;
-        padding-inline: 20px;
-
-        &:hover {
-          border-bottom-color: transparent;
-        }
-
-        &:focus {
-          background-color: #efe6bf;
-          color: $text-color;
-          outline: 2px solid transparent;
-        }
-      }
-    }
-
-    .heading {
-      max-width: 540px;
-      font-size: 56px;
+      opacity: 1;
     }
 
     .hero {
-      min-height: 60vh;
-    }
-  }
-}
+      min-height: 70vh;
+      max-width: 540px;
+      margin-block-end: 96px;
 
-@media only screen and (min-width: 992px) {
-  #header {
-    .menu {
-      gap: 20px;
+      .heading {
+        font-size: 48px;
+      }
     }
   }
 }
@@ -192,7 +79,7 @@
 @media only screen and (min-width: 1200px) {
   #header {
     &::before {
-      background: radial-gradient(circle at top left, #eff5ef, transparent 60%);
+      background: radial-gradient(circle at top left, hsla(45, 51%, 76%, 25%), transparent 60%);
     }
   }
 }

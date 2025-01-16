@@ -1,6 +1,6 @@
 import React from 'react'
 
-function OpruimCoach() {
+function OpruimCoaching() {
   return (
     <>
       <p>Opruimcoach</p>
@@ -8,4 +8,4 @@ function OpruimCoach() {
   )
 }
 
-export default OpruimCoach
+export default OpruimCoaching

@@ -6,7 +6,7 @@ function Workflow() {
       <div className='container'>
         <div className='row'>
           <div className='col'>
-            <h2 className='heading heading-with-line workflow-heading'>Hoe gaan we te werk?</h2>
+            <h2 className='heading workflow-heading'>Hoe gaan we te werk?</h2>
           </div>
         </div>
         <div className='row'>
