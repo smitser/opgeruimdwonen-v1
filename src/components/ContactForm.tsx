@@ -139,10 +139,10 @@ function ContactForm() {
               })}
             >
               {({ isSubmitting, handleChange, handleBlur, values, errors, touched }) => (
-                <Form data-netlify='true' netlify-honeypot='bot-field' method='POST' noValidate>
-                  <Field type='hidden' name='form-name' />
+                <Form name='contact' data-netlify='true' netlify-honeypot='bot-field' method='POST' noValidate>
+                  <input type='hidden' name='form-name' value='contact' />
                   <div hidden aria-hidden='true'>
-                    <Field type='hidden' name='bot-field' />
+                    <input name='bot-field' />
                   </div>
                   <div className={classNames('control', { 'has-error': errors.name && touched.name })}>
                     <label htmlFor='name'>
