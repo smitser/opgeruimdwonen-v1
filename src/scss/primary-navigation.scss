@@ -1,0 +1,127 @@
+#nav-wrapper {
+  // background: $text-color;
+}
+
+#primary-navigation {
+  margin-block-end: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#logo {
+  margin-inline-end: auto;
+  display: inline-block;
+  padding-block: 8px;
+  transition: transform 0.3s ease-in-out;
+
+  svg {
+    max-width: 60vw;
+  }
+}
+
+.menu {
+  padding: 0;
+  list-style: none;
+
+  &.open {
+    display: flex;
+  }
+
+  a {
+    text-decoration: none;
+    padding-block: 16px;
+    display: block;
+    color: $text-color;
+
+    &[aria-current='page'] {
+      border-bottom-color: currentColor;
+    }
+  }
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: thin solid #cad0d8;
+  border-radius: 12px;
+  padding: 10px;
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  color: $text-color;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #primary-navigation {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #logo {
+    &:focus {
+      transform: scale(1.15);
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    padding: 0;
+
+    a {
+      padding: 10px 16px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease-in-out;
+
+      &:hover {
+        border-bottom-color: currentColor;
+      }
+
+      &:focus {
+        outline: 2px solid currentColor;
+      }
+    }
+
+    .nav-contact {
+      background-color: $text-color;
+      transition: all 0.3s ease-in-out;
+      border-radius: 12px;
+      color: #fff;
+      padding-inline: 20px;
+
+      &:hover {
+        border-bottom-color: transparent;
+        color: $beige;
+      }
+
+      &:focus {
+        background-color: #e1d2a3;
+        color: $text-color;
+        outline: 2px solid transparent;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .menu {
+    gap: 20px;
+  }
+}

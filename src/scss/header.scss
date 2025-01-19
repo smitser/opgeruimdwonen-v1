@@ -1,0 +1,85 @@
+#header {
+  min-height: 80vh;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: radial-gradient(circle at top left, hsla(45, 51%, 76%, 25%), transparent 85%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-position: 65% bottom;
+    opacity: 0.75;
+  }
+
+  .hero {
+    min-height: 50vh;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    margin-block-end: 120px;
+
+    .heading {
+      font-size: 48px;
+      margin-block-end: 0;
+    }
+
+    .text {
+      font-size: 20px;
+    }
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #header {
+    min-height: 100vh;
+
+    &::before {
+      background: radial-gradient(circle at top left, hsla(45, 51%, 76%, 25%), transparent 80%);
+    }
+
+    &::after {
+      background-position: 75% bottom;
+      opacity: 1;
+    }
+
+    .hero {
+      min-height: 70vh;
+      max-width: 540px;
+      margin-block-end: 96px;
+
+      .heading {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #header {
+    &::before {
+      background: radial-gradient(circle at top left, hsla(45, 51%, 76%, 25%), transparent 60%);
+    }
+  }
+}
