@@ -83,11 +83,17 @@ function ContactForm() {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   async function handleFormSubmit(values: MyFormValues, { setSubmitting, resetForm }: FormikHelpers<MyFormValues>) {
+    const formData = new FormData()
+    Object.entries(values).forEach(([key, value]) => {
+      formData.append(key, value)
+    })
+    formData.append('form-name', 'contact')
+
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(values as any).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       })
 
       if (response.ok) {
