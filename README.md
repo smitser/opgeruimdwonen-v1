@@ -1,5 +1,11 @@
 ## 🚀 TODO
 
+- recaptcha 2
+- react-dom.production.min.js:131 Uncaught Error: Minified React error #418; visit
+- gatsby-plugin-image
+- image sizes
+- privacy disclaimer ?
+
 - cleanup/refactor code and styles
 - SEO
 

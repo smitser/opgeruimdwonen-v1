@@ -2,7 +2,6 @@ import React from 'react'
 import FacebookIcon from '../icons/Facebook'
 import InstagramIcon from '../icons/Instagram'
 import ArrowUpSquaredIcon from '../icons/ArrowUpSquared'
-import logo from '../images/logo-one-liner.svg'
 
 const Copyright = () => {
   return <div id='copyright'>Copyright &copy; {new Date().getFullYear()} Opgeruimd wonen.</div>
@@ -11,10 +10,20 @@ const Copyright = () => {
 const Socials = () => {
   return (
     <div id='socials'>
-      <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/profile.php?id=61569936239935'>
+      <a
+        target='_blank'
+        rel='noopener noreferrer'
+        href='https://www.facebook.com/profile.php?id=61569936239935'
+        title='Opgeruimd Wonen op Facebook'
+      >
         <FacebookIcon />
       </a>
-      <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/opgeruimdwonenbysofie/'>
+      <a
+        target='_blank'
+        rel='noopener noreferrer'
+        href='https://www.instagram.com/opgeruimdwonenbysofie/'
+        title='Opgeruimd Wonen op Instagram'
+      >
         <InstagramIcon />
       </a>
     </div>

@@ -10,13 +10,18 @@ function PrimaryNavigation() {
   return (
     <div id='nav-wrapper'>
       <nav id='primary-navigation' aria-label='Primary' className='container-fluid container-md'>
-        <a href='/' id='logo'>
+        <a href='/' id='logo' title='Opgeruimd Wonen'>
           <span className='one-liner d-md-none'>
             <LogoOneLiner height={40} fill='#5d985d' />
           </span>
           <img src={logo} width={120} height={120} alt='Opgeruimd wonen' className='d-none d-md-block' />
         </a>
-        <button type='button' className='menu-toggle d-md-none' onClick={() => setNavOpen(!openNav)}>
+        <button
+          type='button'
+          className='menu-toggle d-md-none'
+          onClick={() => setNavOpen(!openNav)}
+          title={openNav ? 'Sluit menu' : 'Open menu'}
+        >
           <BarsIcon />
         </button>
         <ul className={classNames('menu', { open: openNav })}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import about from '../images/about.jpg'
+import { StaticImage } from 'gatsby-plugin-image'
 
 function About() {
   return (
@@ -7,10 +7,13 @@ function About() {
       <div className='container'>
         <div className='row content'>
           <div className='col-12 col-md-5 col-xl-4  d-flex justify-content-center justify-content-lg-start'>
-            <img
-              src={about}
+            <StaticImage
+              src='../images/about.jpg'
               alt='Sofie in een wit shirt glimlacht terwijl ze aan een tafel zit met papieren. Een plant in een pot staat op de voorgrond.'
               className='about-img'
+              // width={352}
+              // height={528}
+              loading='lazy'
             />
           </div>
           <div className='col-12 col-md-7 offset-xl-1 col-xl-7'>

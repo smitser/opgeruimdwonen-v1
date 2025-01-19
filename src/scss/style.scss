@@ -2,6 +2,7 @@ $primary: #5d985d;
 $btn-color: #5d985d;
 $text-color: #163020;
 $beige: #e1d2a3;
+$danger: rgb(187, 52, 47);
 
 .text-center {
   text-align: center !important;
@@ -112,7 +113,8 @@ textarea {
   &:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $primary, 0 0 #0000;
+    border-color: $primary;
+    box-shadow: 0 0 0 2px rgba(93, 152, 93, 0.4);
   }
 }
 
@@ -120,7 +122,33 @@ textarea {
   margin-block-end: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+
+  &.has-error {
+    input,
+    textarea {
+      border-color: $danger;
+
+      &:focus-visible {
+        box-shadow: 0 0 0 2px rgb($danger, 0.4);
+      }
+    }
+
+    .error {
+      color: $danger;
+      fill: currentColor;
+      font-size: 14px;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      svg {
+        width: 1.25em;
+        height: 1.25em;
+      }
+    }
+  }
 }
 
 .marker {
@@ -318,6 +346,17 @@ textarea {
   }
 }
 
+.btn-inverted {
+  background-color: #fff;
+  color: $text-color;
+  border: thin solid #cad0d8;
+
+  &:hover {
+    background-color: #eff1f3;
+    color: $text-color;
+  }
+}
+
 .btn--secondary {
   background-color: $text-color;
   color: #fff;
@@ -358,3 +397,4 @@ textarea {
 @import 'screenreader';
 @import 'offering';
 @import 'reviews';
+@import 'dialog';

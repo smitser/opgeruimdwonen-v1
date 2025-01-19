@@ -19,6 +19,8 @@ function Offering() {
               <img
                 src={opruimcoaching}
                 alt='Sofie plaatst een kaart met een masker op een witte opbergdoos voor de verkleedkleren in op te bergen.'
+                width={529.5}
+                height={240}
               />
               <div className='content'>
                 <h3 className='mb-2'>Opruimcoaching</h3>
@@ -35,6 +37,8 @@ function Offering() {
               <img
                 src={vastgoedstyling}
                 alt='Moderne eetkamer met een ronde houten tafel, vier groene stoelen en een kroonluchter. Grote ramen bieden uitzicht op een weelderige groene tuin.'
+                width={529.5}
+                height={240}
               />
               <div className='content'>
                 <h3 className='mb-2'>Vastgoedstyling</h3>
